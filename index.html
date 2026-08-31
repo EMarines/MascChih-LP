@@ -1217,10 +1217,20 @@
       }
     };
 
-    // FAQ Accordion toggle helper
+    // FAQ Accordion toggle helper (1 sola ventana abierta a la vez)
     window.toggleFaq = function(element) {
       const item = element.parentElement;
-      item.classList.toggle('active');
+      const isOpen = item.classList.contains('active');
+      
+      // Cerrar todas las preguntas primero
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('active');
+      });
+      
+      // Si no estaba abierta, abrir la seleccionada
+      if (!isOpen) {
+        item.classList.add('active');
+      }
     };
   </script>
 </body>
