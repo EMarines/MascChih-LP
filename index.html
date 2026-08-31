@@ -42,8 +42,8 @@
 
     :root {
       --bg-dark: #183362;
-      --bg-card: rgba(24, 48, 92, 0.55);
-      --bg-card-hover: rgba(34, 66, 124, 0.75);
+      --bg-card: rgba(12, 26, 54, 0.15);
+      --bg-card-hover: rgba(20, 42, 84, 0.28);
       --border-gold: rgba(212, 175, 55, 0.55);
       --border-cyan: rgba(56, 189, 248, 0.5);
       --gold-primary: #D4AF37;
@@ -260,9 +260,9 @@
     .brand-card {
       position: relative;
       background: var(--bg-card);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid var(--border-gold);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       border-radius: var(--radius-2xl);
       padding: 34px 26px;
       display: flex;
@@ -271,7 +271,7 @@
       justify-content: center;
       gap: 16px;
       box-shadow: 
-        0 15px 35px -5px rgba(0, 0, 0, 0.4),
+        0 15px 35px -5px rgba(0, 0, 0, 0.35),
         0 0 25px rgba(212, 175, 55, 0.15);
       overflow: visible;
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -406,10 +406,11 @@
 
     .info-card-text {
       background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-2xl);
       padding: 32px;
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .info-card-text h3 {
@@ -464,12 +465,12 @@
     /* HISTORIA Y MARCO LEGAL */
     .history-card {
       background: var(--bg-card);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-2xl);
       padding: 36px;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
     }
 
     .history-card h3 {
@@ -499,6 +500,8 @@
 
     .process-step {
       background: var(--bg-card);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: var(--radius-2xl);
       padding: 28px 22px;
@@ -532,12 +535,14 @@
     /* VIDEO SECTION */
     .video-card {
       background: var(--bg-card);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border: 1px solid var(--border-gold);
       border-radius: var(--radius-2xl);
       padding: 28px;
       max-width: 850px;
       margin: 0 auto;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
       text-align: center;
     }
 
@@ -571,6 +576,8 @@
       width: 100%;
       border-collapse: collapse;
       background: var(--bg-card);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       border-radius: var(--radius-2xl);
       overflow: hidden;
       border: 1px solid var(--border-gold);
@@ -584,7 +591,7 @@
     }
 
     .comparison-table th {
-      background: rgba(11, 19, 38, 0.95);
+      background: rgba(11, 19, 38, 0.7);
       font-family: 'Montserrat', sans-serif;
       color: var(--gold-primary);
       font-weight: 700;
@@ -604,7 +611,9 @@
 
     .faq-item {
       background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: var(--radius-xl);
       overflow: hidden;
       transition: border-color 0.2s ease;
