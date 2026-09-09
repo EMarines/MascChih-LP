@@ -1246,7 +1246,7 @@
       <li><a href="#como-funciona">¿Cómo Funciona?</a></li>
       <li><a href="#video">Video</a></li>
       <li><a href="#consulta">Centro de Consulta</a></li>
-      <li><a href="javascript:void(0)" onclick="openHomologarModal()" style="color: #FDE68A; font-weight: 700;">✍️ Homologar Contrato</a></li>
+      <li><a href="javascript:void(0)" onclick="openHomologarModal()" style="color: #FDE68A; font-weight: 700;">✍️ Validar Contrato</a></li>
     </ul>
 
     <div class="header-cta">
@@ -1290,12 +1290,12 @@
       </div>
     </div>
 
-    <!-- BOTÓN PRINCIPAL HOMOLOGAR CONTRATO (HERO CTA) -->
+    <!-- BOTÓN PRINCIPAL VALIDAR CONTRATO (HERO CTA) -->
     <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%;">
       <button class="btn-main-homologar" onclick="openHomologarModal()">
         <span class="btn-icon">⚖️</span>
         <div class="btn-texts">
-          <span class="btn-title">Me Interesa Homologar un Contrato</span>
+          <span class="btn-title">Me Interesa Validar un Contrato</span>
           <span class="btn-subtitle">Blindaje Inmediato con Fuerza de Sentencia Ejecutoriada</span>
         </div>
         <span class="btn-arrow">➔</span>
@@ -1414,7 +1414,7 @@
       <div class="process-step">
         <div class="step-num">03</div>
         <h4>Fuerza de Cosa Juzgada</h4>
-        <p>El convenio se homologa y adquiere rango de Sentencia Judicial. Ante cualquier incumplimiento, el desalojo se ejecuta en semanas por Vía de Apremio.</p>
+        <p>El convenio se valida y adquiere rango de Sentencia Judicial. Ante cualquier incumplimiento, el desalojo se ejecuta en semanas por Vía de Apremio.</p>
       </div>
     </div>
   </section>
@@ -1545,7 +1545,7 @@
         <button class="btn-main-homologar" onclick="openHomologarModal()" style="font-size: 0.98rem; padding: 14px 28px;">
           <span class="btn-icon">⚖️</span>
           <div class="btn-texts">
-            <span class="btn-title">Me Interesa Homologar un Contrato</span>
+            <span class="btn-title">Me Interesa Validar un Contrato</span>
             <span class="btn-subtitle">Iniciar Trámite en Sala Pactum</span>
           </div>
           <span class="btn-arrow">➔</span>
@@ -1575,7 +1575,7 @@
     </div>
   </footer>
 
-  <!-- MODAL FORMULARIO DE HOMOLOGACIÓN MASC -->
+  <!-- MODAL FORMULARIO DE VALIDACIÓN MASC -->
   <div class="homologar-modal-overlay" id="homologarModalOverlay" onclick="handleOverlayClick(event)">
     <div class="homologar-modal-card">
       <button class="modal-close-icon" onclick="closeHomologarModal()" title="Cerrar">&times;</button>
@@ -1584,7 +1584,7 @@
       <div id="homologarFormContainer">
         <div class="homologar-form-header">
           <img src="logo_pactum.png" alt="PACTUM" style="height: 38px; width: auto; object-fit: contain; margin: 0 auto 8px; display: block;" />
-          <h3>Me Interesa Homologar un Contrato</h3>
+          <h3>Me Interesa Validar un Contrato</h3>
           <p>Envía tu información para blindar tu operación con fuerza de <strong>Sentencia Ejecutoriada (Cosa Juzgada)</strong> en Sala Pactum Chihuahua.</p>
         </div>
 
@@ -1611,7 +1611,7 @@
           </div>
 
           <button type="submit" class="btn-submit-homologar" id="btnSubmitHomologar">
-            <span id="btnSubmitText">🚀 Enviar Solicitud de Homologación</span>
+            <span id="btnSubmitText">🚀 Enviar Solicitud de Validación</span>
             <span id="btnSubmitSpinner" style="display: none;">⏳ Enviando solicitud a Sala Pactum...</span>
           </button>
 
@@ -1762,7 +1762,7 @@
           Telefono_WhatsApp: telefono,
           Email: email,
           Descripcion_del_Caso: descripcion,
-          _subject: `⚖️ Solicitud de Homologación MASC: ${nombre}`,
+          _subject: `⚖️ Solicitud de Validación MASC: ${nombre}`,
           _template: 'table',
           _captcha: 'false'
         };
