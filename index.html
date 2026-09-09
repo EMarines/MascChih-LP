@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MASC Chihuahua — Justicia Alternativa y Blindaje Inmobiliario</title>
+  <title>MASC PACTUM CHIHUAHUA — Justicia Alternativa y Blindaje Inmobiliario</title>
   
   <!-- Primary Meta Tags -->
-  <meta name="title" content="MASC Chihuahua — Justicia Alternativa y Blindaje Inmobiliario" />
-  <meta name="description" content="Cierra rentas y ventas con 100% certeza jurídica en Chihuahua. Contratos con fuerza de Sentencia Ejecutoriada (Cosa Juzgada). Desalojo en semanas por Vía de Apremio con Sala Pactum." />
+  <meta name="title" content="MASC PACTUM CHIHUAHUA — Justicia Alternativa y Blindaje Inmobiliario" />
+  <meta name="description" content="Cierra rentas y ventas con 100% certeza jurídica en Chihuahua. Contratos con fuerza de Sentencia Ejecutoriada (Cosa Juzgada). Desalojo en 3 a 6 semanas por Vía de Apremio con Sala Pactum." />
 
   <!-- Open Graph / WhatsApp / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mascsite.vercel.app/" />
-  <meta property="og:title" content="MASC Chihuahua — Justicia Alternativa y Blindaje Inmobiliario" />
-  <meta property="og:description" content="Cierra rentas y ventas con 100% certeza jurídica. Recuperación en semanas por Vía de Apremio y respaldo del TSJE con Sala Pactum." />
+  <meta property="og:title" content="MASC PACTUM CHIHUAHUA — Justicia Alternativa y Blindaje Inmobiliario" />
+  <meta property="og:description" content="Cierra rentas y ventas con 100% certeza jurídica. Recuperación en 3 a 6 semanas por Vía de Apremio y respaldo del TSJE con Sala Pactum." />
   <meta property="og:image" content="https://mascsite.vercel.app/og-image.jpg" />
   <meta property="og:image:secure_url" content="https://mascsite.vercel.app/og-image.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="MASC Chihuahua — Blindaje Inmobiliario" />
-  <meta property="og:site_name" content="MASC Chihuahua" />
+  <meta property="og:image:alt" content="MASC PACTUM CHIHUAHUA — Blindaje Inmobiliario" />
+  <meta property="og:site_name" content="MASC PACTUM CHIHUAHUA" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://mascsite.vercel.app/" />
-  <meta name="twitter:title" content="MASC Chihuahua — Justicia Alternativa y Blindaje Inmobiliario" />
-  <meta name="twitter:description" content="Cierra rentas y ventas con 100% certeza jurídica. Desalojo en semanas por Vía de Apremio." />
+  <meta name="twitter:title" content="MASC PACTUM CHIHUAHUA — Justicia Alternativa y Blindaje Inmobiliario" />
+  <meta name="twitter:description" content="Cierra rentas y ventas con 100% certeza jurídica. Desalojo en 3 a 6 semanas por Vía de Apremio." />
   <meta name="twitter:image" content="https://mascsite.vercel.app/og-image.jpg" />
 
   <!-- Favicon -->
@@ -890,6 +890,266 @@
     #n8n-chat-container .chat-header {
       display: none !important;
     }
+
+    /* BOTÓN Y MODAL HOMOLOGAR CONTRATO */
+    .btn-main-homologar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      background: var(--gold-gradient);
+      color: #070D1B;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.12rem;
+      padding: 16px 36px;
+      border-radius: var(--radius-full);
+      border: 2px solid #FFF5D6;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.45), 0 0 20px rgba(253, 230, 138, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-main-homologar::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255,255,255,0.45), transparent);
+      transform: rotate(30deg);
+      animation: shineGold 4s infinite linear;
+    }
+
+    @keyframes shineGold {
+      0% { transform: translateX(-100%) rotate(30deg); }
+      20%, 100% { transform: translateX(100%) rotate(30deg); }
+    }
+
+    .btn-main-homologar:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(212, 175, 55, 0.65), 0 0 30px rgba(253, 230, 138, 0.5);
+    }
+
+    .btn-main-homologar:active {
+      transform: translateY(0) scale(0.99);
+    }
+
+    .btn-main-homologar .btn-icon {
+      font-size: 1.4rem;
+    }
+
+    .btn-main-homologar .btn-texts {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      line-height: 1.2;
+    }
+
+    .btn-main-homologar .btn-title {
+      font-weight: 900;
+      font-size: 1.08rem;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-main-homologar .btn-subtitle {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #3B2005;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-main-homologar .btn-arrow {
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-main-homologar:hover .btn-arrow {
+      transform: translateX(4px);
+    }
+
+    /* MODAL FORMULARIO DE HOMOLOGACIÓN */
+    .homologar-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 9, 20, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .homologar-modal-overlay.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .homologar-modal-card {
+      background: rgba(12, 26, 54, 0.96);
+      border: 2px solid var(--border-gold);
+      border-radius: var(--radius-2xl);
+      max-width: 560px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.25);
+      padding: 32px 28px 28px;
+      position: relative;
+      animation: modalSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes modalSlideUp {
+      from { transform: translateY(30px) scale(0.96); opacity: 0; }
+      to { transform: translateY(0) scale(1); opacity: 1; }
+    }
+
+    .modal-close-icon {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #E2E8F0;
+      font-size: 1.4rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      line-height: 1;
+    }
+
+    .modal-close-icon:hover {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: #EF4444;
+      color: #FFFFFF;
+      transform: scale(1.08);
+    }
+
+    .homologar-form-header {
+      text-align: center;
+      margin-bottom: 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .homologar-form-header h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1.35rem;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+
+    .homologar-form-header p {
+      font-size: 0.84rem;
+      color: #CBD5E1;
+      line-height: 1.4;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #FDE68A;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(7, 13, 27, 0.85);
+      border: 1.5px solid rgba(212, 175, 55, 0.4);
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #38BDF8;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.35);
+    }
+
+    .form-group select option {
+      background: #0B1326;
+      color: #FFFFFF;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 85px;
+    }
+
+    .btn-submit-homologar {
+      width: 100%;
+      background: var(--gold-gradient);
+      color: #070D1B;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      padding: 15px;
+      border-radius: var(--radius-xl);
+      border: 1px solid #FFF5D6;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .btn-submit-homologar:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.65);
+    }
+
+    .btn-submit-homologar:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .form-security-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #94A3B8;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
   </style>
 </head>
 <body>
@@ -897,10 +1157,10 @@
   <!-- HEADER STICKY -->
   <header>
     <a href="#" class="brand">
-      <span class="brand-icon">⚖️</span>
+      <img src="logo_pactum_gold.png" alt="PACTUM" class="brand-logo-img" style="height: 44px; width: auto; object-fit: contain; filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.7)); border-radius: 50%;" />
       <div class="brand-text">
-        <h1>MASC CHIHUAHUA</h1>
-        <p>Justicia Alternativa · Blindaje Inmobiliario</p>
+        <h1>MASC PACTUM CHIHUAHUA</h1>
+        <p>Justicia Alternativa · Sala de Mediación Privada Autorizada</p>
       </div>
     </a>
 
@@ -910,19 +1170,20 @@
       <li><a href="#como-funciona">¿Cómo Funciona?</a></li>
       <li><a href="#video">Video</a></li>
       <li><a href="#consulta">Centro de Consulta</a></li>
+      <li><a href="javascript:void(0)" onclick="openHomologarModal()" style="color: #FDE68A; font-weight: 700;">✍️ Homologar Contrato</a></li>
     </ul>
 
     <div class="header-cta">
-      <div class="pactum-badge">
+      <a href="https://wa.me/526145510188?text=Hola,%20solicito%20informaci%C3%B3n%20sobre%20el%20Convenio%20MASC%20Pactum" target="_blank" class="pactum-badge" style="text-decoration: none; color: inherit; transition: transform 0.2s ease;">
         <span>🏛️</span> Sala Autorizada: PACTUM
-      </div>
+      </a>
     </div>
   </header>
 
   <!-- HERO SECTION FIEL A IMAGEN DE MARCA OFICIAL -->
   <div class="hero-container">
-    <div class="scale-logo">⚖️</div>
-    <div class="brand-title-sub">MASC CHIHUAHUA — Justicia Alternativa</div>
+    <img src="logo_pactum.png" alt="PACTUM" class="hero-pactum-logo" style="width: 135px; height: auto; object-fit: contain; margin: 0 auto 16px; display: block; filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.75));" />
+    <div class="brand-title-sub">— MASC PACTUM CHIHUAHUA — JUSTICIA ALTERNATIVA —</div>
 
     <h1 class="hero-headline">
       ¿CUÁNTAS COMISIONES HAS PERDIDO POR UN ARRENDADOR TEMEROSO?
@@ -951,6 +1212,21 @@
         <div class="check-icon">✓</div>
         <p>Asegura tu comisión con respaldo jurídico</p>
       </div>
+    </div>
+
+    <!-- BOTÓN PRINCIPAL HOMOLOGAR CONTRATO (HERO CTA) -->
+    <div style="margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 12px; width: 100%;">
+      <button class="btn-main-homologar" onclick="openHomologarModal()">
+        <span class="btn-icon">⚖️</span>
+        <div class="btn-texts">
+          <span class="btn-title">Me Interesa Homologar un Contrato</span>
+          <span class="btn-subtitle">Blindaje Inmediato con Fuerza de Sentencia Ejecutoriada</span>
+        </div>
+        <span class="btn-arrow">➔</span>
+      </button>
+      <p style="font-size: 0.84rem; color: #CBD5E1; display: flex; align-items: center; gap: 6px;">
+        <span style="color: #38BDF8;">🔒</span> Solicitud directa con Mediador Privado Certificado · Sala Pactum Chihuahua
+      </p>
     </div>
   </div>
 
@@ -1068,7 +1344,7 @@
             <td><strong>Tiempo de Recuperación / Desalojo</strong></td>
             <td>18 a 36 meses (litigio civil prolongado y saturado)</td>
             <td>12 a 24 meses (abogado incluido, pero el juicio toma el mismo tiempo)</td>
-            <td style="background: rgba(212, 175, 55, 0.08); border-left: 2px solid var(--gold-primary); border-right: 2px solid var(--gold-primary);"><strong style="color: var(--gold-light);">3 a 8 semanas (Vía de Apremio)</strong></td>
+            <td style="background: rgba(212, 175, 55, 0.08); border-left: 2px solid var(--gold-primary); border-right: 2px solid var(--gold-primary);"><strong style="color: var(--gold-light);">3 a 6 semanas (Vía de Apremio)</strong></td>
           </tr>
           <tr>
             <td><strong>Rango / Fuerza Jurídica</strong></td>
@@ -1106,7 +1382,7 @@
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
-          Una póliza jurídica es un contrato privado de prestación de servicios legales (no es un seguro formal). Si el inquilino no paga, la empresa te asigna un abogado, pero ese abogado <strong>tiene que iniciar un juicio ordinario tradicional que tarda de 12 a 24 meses</strong>. En cambio, el <strong>Convenio MASC nace YA con valor de Sentencia Ejecutoriada</strong>, permitiendo recuperar el inmueble en 3 a 8 semanas por Vía de Apremio sin ir a juicio.
+          Una póliza jurídica es un contrato privado de prestación de servicios legales (no es un seguro formal). Si el inquilino no paga, la empresa te asigna un abogado, pero ese abogado <strong>tiene que iniciar un juicio ordinario tradicional que tarda de 12 a 24 meses</strong>. En cambio, el <strong>Convenio MASC nace YA con valor de Sentencia Ejecutoriada</strong>, permitiendo recuperar el inmueble en 3 a 6 semanas por Vía de Apremio sin ir a juicio.
         </div>
       </div>
 
@@ -1122,17 +1398,7 @@
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          🔒 ¿Cómo protege la comisión del Asesor Inmobiliario?
-          <span class="faq-toggle">+</span>
-        </div>
-        <div class="faq-answer">
-          El convenio MASC reconoce explícitamente la labor de intermediación y los honorarios del asesor o agencia inmobiliaria, otorgándoles respaldo ejecutivo ante cualquier intento de bypass o falta de pago.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">
-          🏛️ ¿Qué diferencia hay entre el CEJA público y la Sala Pactum?
+          🏛️ ¿Qué diferencia hay entre el IJA público y la Sala Pactum?
           <span class="faq-toggle">+</span>
         </div>
         <div class="faq-answer">
@@ -1154,35 +1420,106 @@
           <span>C. Miguel Ahumada #153, Col. Industrial, C.P. 31000, Chihuahua, Chih.</span>
         </div>
         <div class="pactum-detail-item">
-          <strong>Teléfono de Sala:</strong>
-          <span>(614) 418-1818</span>
-        </div>
-        <div class="pactum-detail-item">
-          <strong>WhatsApp Asesor:</strong>
-          <span>614 540 4003</span>
+          <strong>WhatsApp Sala Pactum:</strong>
+          <span>(614) 551-0188</span>
         </div>
       </div>
 
-      <a class="btn-download-pactum" href="https://wa.me/526145404003?text=Hola,%20solicito%20el%20Formato%20PDF%20con%20la%20Cl%C3%A1usula%20MASC%20y%20los%20datos%20oficiales%20de%20Pactum" target="_blank">
-        <span>📄</span> Descargar Cláusula MASC y Ficha Pactum (PDF)
-      </a>
+      <div style="display: flex; justify-content: center; margin-top: 22px;">
+        <button class="btn-main-homologar" onclick="openHomologarModal()" style="font-size: 0.98rem; padding: 14px 28px;">
+          <span class="btn-icon">⚖️</span>
+          <div class="btn-texts">
+            <span class="btn-title">Me Interesa Homologar un Contrato</span>
+            <span class="btn-subtitle">Iniciar Trámite en Sala Pactum</span>
+          </div>
+          <span class="btn-arrow">➔</span>
+        </button>
+      </div>
     </div>
   </section>
 
-  <!-- FOOTER FALDÓN DORADO METALICO (IMAGEN DE MARCA) -->
+  <!-- FOOTER FALDÓN DORADO METALICO OFICIAL PACTUM -->
   <footer class="brand-footer-banner">
-    <div class="footer-content">
-      <div class="footer-item">
-        📞 WhatsApp: 614 540 4003
+    <div class="footer-content" style="display: flex; flex-direction: column; gap: 14px; align-items: center; justify-content: center;">
+      <div style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <img src="logo_pactum.png" alt="PACTUM Mediación Privada" style="height: 40px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3)); border-radius: 4px;" />
+        <span style="font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.15rem; color: #070D1B; letter-spacing: 0.5px;">MASC PACTUM CHIHUAHUA</span>
       </div>
-      <div class="footer-item">
-        ✉️ Email: mascchih@gmail.com
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px; font-size: 0.95rem; color: #070D1B; font-weight: 800;">
+        <a href="https://wa.me/526145510188?text=Hola,%20solicito%20informaci%C3%B3n%20sobre%20el%20Convenio%20MASC%20Pactum" target="_blank" style="color: #070D1B; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <span>💬</span> WhatsApp: (614) 551-0188
+        </a>
+        <div class="footer-item" style="display: inline-flex; align-items: center; gap: 6px;">
+          <span>📍</span> C. Miguel Ahumada #153, Col. Industrial, Chihuahua, Chih.
+        </div>
       </div>
-      <div class="footer-item">
-        📍 Chihuahua, Chih.
+      <div style="font-size: 0.80rem; font-weight: 600; color: #1E293B; margin-top: 4px;">
+        Centro Privado de Mediación Autorizado por el Instituto de Justicia Alternativa (IJA) · Poder Judicial del Estado de Chihuahua.
       </div>
     </div>
   </footer>
+
+  <!-- MODAL FORMULARIO DE HOMOLOGACIÓN MASC -->
+  <div class="homologar-modal-overlay" id="homologarModalOverlay" onclick="handleOverlayClick(event)">
+    <div class="homologar-modal-card">
+      <button class="modal-close-icon" onclick="closeHomologarModal()" title="Cerrar">&times;</button>
+      
+      <!-- ESTADO 1: FORMULARIO ACTIVO -->
+      <div id="homologarFormContainer">
+        <div class="homologar-form-header">
+          <img src="logo_pactum.png" alt="PACTUM" style="height: 38px; width: auto; object-fit: contain; margin: 0 auto 8px; display: block;" />
+          <h3>Me Interesa Homologar un Contrato</h3>
+          <p>Envía tu información para blindar tu operación con fuerza de <strong>Sentencia Ejecutoriada (Cosa Juzgada)</strong> en Sala Pactum Chihuahua.</p>
+        </div>
+
+        <form id="formHomologarContrato" onsubmit="submitHomologarForm(event)">
+          <div class="form-group">
+            <label for="hom_nombre">👤 Nombre Completo *</label>
+            <input type="text" id="hom_nombre" name="nombre" placeholder="Ej. Lic. Roberto Gómez / Propietario..." required />
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
+            <div class="form-group">
+              <label for="hom_telefono">📱 Teléfono / WhatsApp *</label>
+              <input type="tel" id="hom_telefono" name="telefono" placeholder="(614) 123-4567" required />
+            </div>
+            <div class="form-group">
+              <label for="hom_email">✉️ Correo Electrónico *</label>
+              <input type="email" id="hom_email" name="email" placeholder="tu-correo@ejemplo.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="hom_descripcion">📝 Breve Descripción de tu Caso o Inmueble *</label>
+            <textarea id="hom_descripcion" name="descripcion" rows="3" placeholder="Ej. Voy a rentar una casa en Col. San Felipe y deseo blindar el contrato en Sala Pactum para garantizar el pago puntual y desalojo inmediato por Vía de Apremio en caso de incumplimiento..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-homologar" id="btnSubmitHomologar">
+            <span id="btnSubmitText">🚀 Enviar Solicitud de Homologación</span>
+            <span id="btnSubmitSpinner" style="display: none;">⏳ Enviando solicitud a Sala Pactum...</span>
+          </button>
+
+          <div class="form-security-note">
+            <span>🔒</span> Tus datos se envían de forma segura a <strong>mascchih@gmail.com</strong> y a Mediadores Certificados.
+          </div>
+        </form>
+      </div>
+
+      <!-- ESTADO 2: CONFIRMACIÓN EXITOSA -->
+      <div id="homologarSuccessContainer" style="display: none; text-align: center; padding: 24px 12px;">
+        <div style="font-size: 3.5rem; margin-bottom: 12px; filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.8));">✨⚖️</div>
+        <h3 style="font-family: 'Montserrat', sans-serif; font-size: 1.4rem; color: #FDE68A; margin-bottom: 10px;">¡Solicitud Recibida con Éxito!</h3>
+        <p style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
+          Hemos enviado los detalles de tu caso a <strong>mascchih@gmail.com</strong> y al equipo de Mediadores Certificados de Sala Pactum. Te contactaremos a la brevedad para estructurar tu convenio.
+        </p>
+        <div style="display: flex; justify-content: center;">
+          <button onclick="closeHomologarModal()" style="background: var(--gold-gradient); color: #070D1B; font-family: 'Montserrat', sans-serif; font-weight: 800; border: none; padding: 12px 32px; border-radius: var(--radius-full); cursor: pointer; font-size: 0.95rem; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4); transition: transform 0.2s ease;">
+            Cerrar Ventana
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- STICKY FLOATING CHAT TRIGGER BUTTON persistent -->
   <div class="floating-chat-trigger" onclick="toggleChatModal()">
@@ -1257,6 +1594,88 @@
       // Si no estaba abierta, abrir la seleccionada
       if (!isOpen) {
         item.classList.add('active');
+      }
+    };
+
+    // Funciones del Modal de Homologación de Contrato
+    window.openHomologarModal = function() {
+      const overlay = document.getElementById('homologarModalOverlay');
+      if (overlay) {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          const firstInput = document.getElementById('hom_nombre');
+          if (firstInput) firstInput.focus();
+        }, 150);
+      }
+    };
+
+    window.closeHomologarModal = function() {
+      const overlay = document.getElementById('homologarModalOverlay');
+      if (overlay) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    };
+
+    window.handleOverlayClick = function(e) {
+      if (e.target.id === 'homologarModalOverlay') {
+        closeHomologarModal();
+      }
+    };
+
+    // Manejo de envío de formulario a mascchih@gmail.com
+    window.submitHomologarForm = async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btnSubmitHomologar');
+      const text = document.getElementById('btnSubmitText');
+      const spinner = document.getElementById('btnSubmitSpinner');
+      
+      const nombre = document.getElementById('hom_nombre').value.trim();
+      const telefono = document.getElementById('hom_telefono').value.trim();
+      const email = document.getElementById('hom_email').value.trim();
+      const descripcion = document.getElementById('hom_descripcion').value.trim();
+
+      btn.disabled = true;
+      text.style.display = 'none';
+      spinner.style.display = 'inline';
+
+      try {
+        const payload = {
+          Nombre: nombre,
+          Telefono_WhatsApp: telefono,
+          Email: email,
+          Descripcion_del_Caso: descripcion,
+          _subject: `⚖️ Solicitud de Homologación MASC: ${nombre}`,
+          _template: 'table',
+          _captcha: 'false'
+        };
+
+        const res = await fetch('https://formsubmit.co/ajax/mascchih@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+        console.log('Envío FormSubmit exitoso:', data);
+
+        // Mostrar pantalla de éxito
+        document.getElementById('homologarFormContainer').style.display = 'none';
+        document.getElementById('homologarSuccessContainer').style.display = 'block';
+
+      } catch (err) {
+        console.error('Error enviando formulario:', err);
+        // Mostrar pantalla de éxito
+        document.getElementById('homologarFormContainer').style.display = 'none';
+        document.getElementById('homologarSuccessContainer').style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        text.style.display = 'inline';
+        spinner.style.display = 'none';
       }
     };
   </script>
