@@ -473,11 +473,85 @@
       margin-bottom: 16px;
     }
 
+    .history-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      color: #F8FAFC;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .history-card p {
       color: #E2E8F0;
       font-size: 0.95rem;
       margin-bottom: 14px;
       line-height: 1.6;
+    }
+
+    .mediadores-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0 20px;
+    }
+
+    .mediador-chip {
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      color: #FDE68A;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .history-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 28px;
+    }
+
+    @media (max-width: 768px) {
+      .history-gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .history-img-card {
+      background: rgba(11, 22, 44, 0.6);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .history-img-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-primary);
+    }
+
+    .history-img-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .history-img-caption {
+      padding: 14px 16px;
+      font-size: 0.84rem;
+      color: #CBD5E1;
+      line-height: 1.45;
+      background: rgba(15, 23, 42, 0.85);
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
     }
 
     /* PROCESO 3 PASOS */
@@ -1168,7 +1242,7 @@
 
     <ul class="nav-links">
       <li><a href="#que-es">¿Qué es?</a></li>
-      <li><a href="#historia">Historia MASC</a></li>
+      <li><a href="#historia">Historia de PACTUM</a></li>
       <li><a href="#como-funciona">¿Cómo Funciona?</a></li>
       <li><a href="#video">Video</a></li>
       <li><a href="#consulta">Centro de Consulta</a></li>
@@ -1259,21 +1333,61 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 2: HISTORIA Y MARCO LEGAL EN CHIHUAHUA -->
+  <!-- SECCIÓN 2: HISTORIA DE PACTUM Y MARCO LEGAL EN CHIHUAHUA -->
   <section id="historia">
     <div class="section-header">
       <span class="section-tag">Trayectoria & Vanguardia</span>
-      <h2 class="section-title">Reseña Histórica de la <span>Justicia Alternativa en Chihuahua</span></h2>
+      <h2 class="section-title">Historia de <span>PACTUM y la Justicia Alternativa</span></h2>
     </div>
 
     <div class="history-card">
-      <h3>El Estado Líder en Mediación y Paz Jurídica</h3>
+      <h3>El Estado Pionero en Mediación y Paz Jurídica</h3>
       <p>
-        Chihuahua ha sido pionero nacional en la implementación de la Ley de Justicia Alternativa, consolidando al <strong>Tribunal Superior de Justicia del Estado (TSJE)</strong> y a su Centro Estatal de Mecanismos Alternativos (CEJA) como referentes de eficacia procesal.
+        Chihuahua ha sido referente nacional en la implementación de la Ley de Justicia Alternativa, consolidando al <strong>Tribunal Superior de Justicia del Estado (TSJE)</strong> y a su <strong>Instituto de Justicia Alternativa (IJA)</strong> a la vanguardia en eficacia procesal y resolución pacífica de controversias.
       </p>
       <p>
-        Para agilizar los tiempos de atención e integrar el servicio al sector inmobiliario privado, la ley autorizó la creación de las <strong>Salas Particulares de Mediación</strong>. A través de aliados estratégicos como <strong>PACTUM Mediación Privada</strong>, los propietarios y agentes inmobiliarios pueden formalizar sus convenios en instalaciones ejecutivas de primer nivel, sin filas de juzgados y con el mismo valor ejecutivo judicial.
+        Para agilizar los tiempos de atención e integrar el servicio al sector inmobiliario privado, la legislación autorizó la creación de los <strong>Centros y Salas Privadas de Mediación</strong>, dotando a sus convenios y acuerdos del mismo valor y fuerza que una <strong>Sentencia Judicial Definitiva (Cosa Juzgada)</strong>.
       </p>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.25); margin: 24px 0;" />
+
+      <h4>🏛️ Nacimiento e Inauguración de PACTUM (Centro Privado No. 1)</h4>
+      <p>
+        Contando con la presencia de distinguidas autoridades del <strong>Tribunal Superior de Justicia del Estado de Chihuahua (TSJE)</strong>, así como personal y directivos del <strong>Instituto de Justicia Alternativa (IJA)</strong>, fue formalmente inaugurado el primer Centro de Mediación del Estado, llamado <strong>PACTUM · Centro de Mediación Privado No. 1</strong>.
+      </p>
+
+      <p style="margin-bottom: 8px;">
+        Este centro pionero está conformado por un equipo multidisciplinario de Mediadores Privados Certificados:
+      </p>
+      <div class="mediadores-chips">
+        <div class="mediador-chip">⚖️ Lic. Ricardo Gutiérrez</div>
+        <div class="mediador-chip">⚖️ Mtro. Carlos Enríquez</div>
+        <div class="mediador-chip">⚖️ Lic. Raquel Zafiro</div>
+      </div>
+
+      <p>
+        <strong>PACTUM</strong> nace de la necesidad de que en Chihuahua exista un Centro de Mediación de excelencia que apoye a los ciudadanos, propietarios y profesionales inmobiliarios a resolver pacíficamente sus conflictos y blindar sus operaciones con total certeza jurídica.
+      </p>
+      <p>
+        Actualmente, sus oficinas ejecutivas ubicadas en <strong>C. Miguel Ahumada #153 (Col. Industrial)</strong>, cuentan con <strong>2 salas privadas de mediación</strong> equipadas para brindar una atención ejecutiva, confidencial y de la más alta calidad técnica.
+      </p>
+
+      <!-- GALERÍA DUAL DE INAUGURACIÓN -->
+      <div class="history-gallery-grid">
+        <div class="history-img-card">
+          <img src="inauguracion_corte_liston_pactum.jpg" alt="Corte de listón inaugural PACTUM con autoridades del TSJE e IJA" />
+          <div class="history-img-caption">
+            ✂️ <strong>Corte de Listón Inaugural:</strong> Autoridades del Tribunal Superior de Justicia (TSJE), Instituto de Justicia Alternativa (IJA) y el equipo fundador de mediadores de PACTUM.
+          </div>
+        </div>
+
+        <div class="history-img-card">
+          <img src="inauguracion_fachada_pactum.jpg" alt="Sede Oficial PACTUM Centro de Mediación Privado No. 1" />
+          <div class="history-img-caption">
+            🏛️ <strong>Sede Oficial PACTUM:</strong> Centro de Mediación Privado No. 1 en C. Miguel Ahumada #153, Chihuahua, Chih.
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
