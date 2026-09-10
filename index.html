@@ -723,19 +723,21 @@
       transition: transform 0.2s ease;
     }
 
-    /* PACTUM RESOURCE CARD & DOWNLOAD BUTTON */
+    /* PACTUM CONTACT CARD */
     .pactum-resource-card {
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(15, 23, 42, 0.9) 100%);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(15, 23, 42, 0.94) 100%);
       border: 2px solid var(--border-gold);
       border-radius: var(--radius-2xl);
-      padding: 32px;
+      padding: 32px 28px;
       text-align: center;
       box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+      margin-top: 24px;
     }
 
     .pactum-resource-card h3 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
+      font-weight: 800;
       color: #FFFFFF;
       margin-bottom: 8px;
     }
@@ -744,58 +746,60 @@
       color: #CBD5E1;
       font-size: 0.9rem;
       max-width: 640px;
-      margin: 0 auto 24px;
+      margin: 0 auto 22px;
+      line-height: 1.5;
     }
 
     .pactum-details-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 20px;
       text-align: left;
-      margin-bottom: 24px;
-      background: rgba(7, 13, 27, 0.7);
-      padding: 20px;
+      margin-bottom: 22px;
+      background: rgba(7, 13, 27, 0.75);
+      padding: 20px 24px;
       border-radius: var(--radius-xl);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      align-items: center;
     }
 
     @media (max-width: 768px) {
-      .pactum-details-grid { grid-template-columns: 1fr; }
+      .pactum-details-grid { 
+        grid-template-columns: 1fr;
+        padding: 18px 16px;
+        gap: 16px;
+      }
+    }
+
+    .pactum-detail-item {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
 
     .pactum-detail-item strong {
       color: var(--gold-primary);
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 6px;
       font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-
-    .pactum-detail-item span {
-      font-size: 0.85rem;
-      color: #F8FAFC;
-    }
-
-    .btn-download-pactum {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--gold-gradient);
-      color: #070D1B;
-      font-family: 'Montserrat', sans-serif;
       font-weight: 800;
-      font-size: 0.95rem;
-      padding: 14px 28px;
-      border-radius: var(--radius-xl);
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .btn-download-pactum:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+    .pactum-detail-item span,
+    .pactum-detail-item a {
+      font-size: 0.92rem;
+      color: #F8FAFC;
+      line-height: 1.45;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .pactum-detail-item a:hover {
+      color: var(--gold-primary);
+      text-decoration: underline;
     }
 
     /* FOOTER FALDÓN DORADO MAESTRO */
@@ -1168,6 +1172,13 @@
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(148, 163, 184, 0.45);
+      font-weight: 400;
+      opacity: 1;
+    }
+
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
@@ -1218,13 +1229,33 @@
 
     .form-security-note {
       text-align: center;
-      font-size: 0.75rem;
+      font-size: 0.76rem;
+      line-height: 1.45;
       color: #94A3B8;
-      margin-top: 12px;
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .form-security-note .sec-main-line {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 6px;
+      color: #94A3B8;
+    }
+
+    .form-security-note .sec-email {
+      color: #FDE68A;
+      font-weight: 600;
+    }
+
+    .form-security-note .sec-sub {
+      color: #94A3B8;
+      font-size: 0.73rem;
     }
   </style>
 </head>
@@ -1523,25 +1554,27 @@
       </div>
     </div>
 
-    <!-- PACTUM RESOURCE CARD WITH DOWNLOAD BUTTON -->
+    <!-- PACTUM DATOS OFICIALES CARD -->
     <div class="pactum-resource-card">
-      <h3>🏛️ Ficha Técnica y Datos Oficiales de PACTUM Mediación Privada</h3>
+      <h3>🏛️ Datos Oficiales de Sala PACTUM Mediación Privada</h3>
       <p>
-        Consulta los datos de la Sala Autorizada para incluir la cláusula MASC en tus contratos de arrendamiento y compraventa.
+        Información oficial de la Sala Autorizada para incluir la cláusula MASC en tus contratos de arrendamiento y compraventa.
       </p>
 
       <div class="pactum-details-grid">
         <div class="pactum-detail-item">
-          <strong>Sede Ejecutiva:</strong>
+          <strong>📍 Sede Ejecutiva:</strong>
           <span>C. Miguel Ahumada #153, Col. Industrial, C.P. 31000, Chihuahua, Chih.</span>
         </div>
         <div class="pactum-detail-item">
-          <strong>WhatsApp Sala Pactum:</strong>
-          <span>(614) 551-0188</span>
+          <strong>💬 WhatsApp Sala Pactum:</strong>
+          <a href="https://wa.me/526145510188?text=Hola,%20solicito%20informaci%C3%B3n%20sobre%20el%20Convenio%20MASC%20Pactum" target="_blank" title="Contactar por WhatsApp">
+            (614) 551-0188
+          </a>
         </div>
       </div>
 
-      <div style="display: flex; justify-content: center; margin-top: 22px;">
+      <div style="display: flex; justify-content: center; margin-top: 24px;">
         <button class="btn-main-homologar" onclick="openHomologarModal()" style="font-size: 0.98rem; padding: 14px 28px;">
           <span class="btn-icon">⚖️</span>
           <div class="btn-texts">
@@ -1591,7 +1624,7 @@
         <form id="formHomologarContrato" onsubmit="submitHomologarForm(event)">
           <div class="form-group">
             <label for="hom_nombre">👤 Nombre Completo *</label>
-            <input type="text" id="hom_nombre" name="nombre" placeholder="Ej. Lic. Roberto Gómez / Propietario..." required />
+            <input type="text" id="hom_nombre" name="nombre" placeholder="Tu nombre aquí" required />
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px;">
@@ -1606,8 +1639,8 @@
           </div>
 
           <div class="form-group">
-            <label for="hom_descripcion">📝 Breve Descripción de tu Caso o Inmueble *</label>
-            <textarea id="hom_descripcion" name="descripcion" rows="3" placeholder="Ej. Voy a rentar una casa en Col. San Felipe y deseo blindar el contrato en Sala Pactum para garantizar el pago puntual y desalojo inmediato por Vía de Apremio en caso de incumplimiento..." required></textarea>
+            <label for="hom_descripcion">📝 Breve Descripción de tu Caso *</label>
+            <textarea id="hom_descripcion" name="descripcion" rows="3" placeholder="Ej. Quiero tener un contrato de arrendamiento blindado" required></textarea>
           </div>
 
           <button type="submit" class="btn-submit-homologar" id="btnSubmitHomologar">
@@ -1616,7 +1649,11 @@
           </button>
 
           <div class="form-security-note">
-            <span>🔒</span> Tus datos se envían de forma segura a <strong>mascchih@gmail.com</strong> y a Mediadores Certificados.
+            <div class="sec-main-line">
+              <span>🔒</span> Tus datos se envían de forma segura a
+            </div>
+            <div class="sec-email">mascchih@gmail.com</div>
+            <div class="sec-sub">y a Mediadores Certificados.</div>
           </div>
         </form>
       </div>
